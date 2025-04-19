@@ -1,3 +1,178 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+}
 
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  row-gap: 3rem;
+  color: hsl(0, 0%, 100%);
+  font-family: Inconsolata, sans-serif;
+  font-size: 20px;
+  padding-block: 5rem;
+  background-color: hsl(248, 70%, 10%);
+  background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+@media screen and (max-width: 32rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-mobile.png");
+    background-position: 50vw 80vh, top, -5vh -5%, top right, bottom left, center;
+    background-size: 8rem, contain, 8rem, 8rem, 25rem, cover;
+  }
+}
+@media screen and (max-width: 68rem) and (min-width: 32rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-tablet.png");
+    background-position: 65vw 75vh, top, 5vh -10%, top right, bottom left, center;
+    background-size: 10rem, contain, 10rem, 15rem, 30rem, cover;
+  }
+}
+@media screen and (min-width: 68rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/background-desktop.png");
+    background-position: 65vw 50vh, top, 10vh -15%, top right, bottom left, center;
+    background-size: 10rem, contain, 10rem, 20rem, 35rem, cover;
+  }
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+.header__image {
+  width: fit-content;
+}
+.header__subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 32rem) {
+  .header {
+    max-width: 90vw;
+  }
+  .header__subsection__title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 32rem) {
+  .header {
+    max-width: 38rem;
+  }
+}
+.attribution {
+  display: none;
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.form__uploader-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border: none;
+}
+.form__uploader-section__title {
+  font-size: 16px;
+  margin-block: 1rem;
+}
+.form__uploader-section__dragdrop {
+  height: 8rem;
+  border: 1px dashed hsl(252, 6%, 83%);
+  border-radius: 8px;
+  background-color: rgba(19, 19, 19, 0.5);
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.form__uploader-section__dragdrop:focus {
+  outline: 2px solid hsl(252, 6%, 83%);
+}
+.form__uploader-section__dragdrop .input-cover {
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.25) url("../images/icon-upload.svg") no-repeat center;
+  background-size: 2.5rem;
+}
+.form__uploader-section__dragdrop span {
+  font-size: 16px;
+}
+.form__uploader-section__sub-info {
+  font-size: 14px;
+}
+.form__uploader-section__sub-info::before {
+  content: " ";
+  padding: 0.7rem;
+  margin-right: 0.2rem;
+  background: url("../images/icon-info.svg") no-repeat center;
+  background-size: contain;
+}
+.form__input-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 16px;
+}
+.form__input-section input {
+  height: 2.8rem;
+  border: 1px solid hsl(252, 6%, 83%);
+  border-radius: 8px;
+  background-color: rgba(19, 19, 19, 0.5);
+  color: white;
+  padding-left: 1rem;
+}
+.form__input-section input:focus {
+  outline: 2px solid hsl(252, 6%, 83%);
+}
+.form__input-section input::placeholder {
+  color: white;
+}
+.form button {
+  height: 2.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(7, 71%, 60%);
+  font-weight: 800;
+  font-size: 16px;
+}
+.form button:hover {
+  opacity: 0.8;
+}
+
+@media screen and (max-width: 32rem) {
+  .form {
+    max-width: 95vw;
+  }
+  .form__uploader-section__sub-info {
+    font-size: 11px;
+  }
+  .form__uploader-section__sub-info::before {
+    padding: 0.55rem;
+  }
+}
+@media screen and (min-width: 32rem) {
+  .form {
+    width: 28rem;
+  }
+}
 
 /*# sourceMappingURL=01_form.css.map */

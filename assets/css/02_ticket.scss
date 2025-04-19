@@ -1,0 +1,108 @@
+@import "style";
+
+$w: 37.5rem;
+$h: 17.5rem;
+
+.ticket {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 1rem;
+    background: url("../images/pattern-ticket.svg") no-repeat center;
+
+    &__header {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    &__infos {
+        grid-column: 1;
+        grid-row: 2;
+        gap: 1rem;
+
+        display: grid;
+        place-items: start;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 6fr;
+
+        &__image {
+            max-height: $h*0.3;
+            grid-row: 1/3;
+            grid-column: 1;
+            border-radius: 10px;
+            place-self: center;
+        }
+        &__name {
+            grid-row: 1;
+            grid-column: 2;
+            font-size: $size*1.2;
+            align-self: end;
+        }
+        &__github {
+            grid-row: 2;
+            grid-column: 2;
+
+            &::before {
+                content: " ";
+                padding: 0.7rem;
+                margin-right: 0.2rem;
+                background: url("../images/icon-github.svg") no-repeat center;
+                background-size: contain;
+
+            }
+        }
+    }
+    &__code {
+        grid-column: 2;
+        grid-row: 1/3;
+        writing-mode: vertical-rl;
+        text-align: center;
+        color: $neutral-500;
+    }
+}
+
+.first-name {
+    background: #F37362FF;
+    background: linear-gradient(90deg, rgba(243, 115, 98, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Pour certains navigateurs modernes */
+    background-clip: text;
+    color: transparent;
+}
+.email { color: $orange-500; font-weight: $bold; }
+
+
+@media screen and (max-width: $sm){
+    .ticket {
+        width: $w*0.5;
+        height: $h*0.5;
+        background-size: $w*0.5 $h*0.5;
+        font-size: $size*0.7;
+
+        img { width: 8rem; }
+
+        &__infos { gap: 0.5rem;
+            &__image { max-width: $w*0.1; }
+            &__name { font-size: $size*0.8; }
+            &__github { font-size: $size*0.5; &::before { padding: 0.55rem; }}
+        }
+        &__code { font-size: $size; }
+    }
+}
+@media screen and (max-width: $md) and (min-width: $sm){
+    .ticket {
+        width: $w*0.75;
+        height: $h*0.75;
+        background-size: $w*0.75 $h*0.75;
+        &__code { font-size: $size*1.2; }
+    }
+}
+@media screen and (min-width: $md){
+    .ticket {
+        width: $w;
+        height: $h;
+        padding: 2rem;
+        &__code { font-size: $size*1.5; }
+    }
+}

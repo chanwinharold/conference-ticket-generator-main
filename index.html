@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/01_form.css">
 
+    <script src="assets/js/main.js" defer></script>
     <script src="assets/js/01_script.js" defer></script>
 
     <title>Frontend Mentor | Conference ticket generator</title>
@@ -19,27 +20,40 @@
 </head>
 <body>
 
-<!-- Form starts -->
+<header class="header">
+    <img class="header__image" src="assets/images/logo-full.svg" alt="logo Coding Conf">
 
-Your Journey to Coding Conf 2025 Starts Here!
+    <div class="header__subsection">
+        <h1 class="header__subsection__title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p class="header__subsection__paragraph">Secure your spot at next year's biggest coding conference.</p>
+    </div>
+</header>
 
-Secure your spot at next year's biggest coding conference.
+<form method="get" class="form">
+    <fieldset class="form__uploader-section">
+        <legend class="form__uploader-section__title">Upload Avatar</legend>
+        <label class="form__uploader-section__dragdrop" for="uploader" tabindex="0">
+            <label class="input-cover" for="uploader"></label>
+            <input id="uploader" type="file" name="image" accept="image/*" hidden>
+            <span>Drag and drop or click to upload</span>
+        </label>
+        <span class="form__uploader-section__sub-info">Upload your photo (JPG or PNG, max size: 500KB).</span>
+    </fieldset>
 
-Upload Avatar
-Drag and drop or click to upload
-Upload your photo (JPG or PNG, max size: 500KB).
+    <label class="form__input-section" for="name">Full Name
+        <input id="name" type="text" name="full_name">
+    </label>
 
-Full Name
+    <label class="form__input-section" for="email">Email Address
+        <input id="email" type="email" name="email" placeholder="example@email.com">
+    </label>
 
-Email Address
-example@email.com
+    <label class="form__input-section" for="github">GitHub Username
+        <input id="github" type="text" name="github" placeholder="@yourusername">
+    </label>
 
-GitHub Username
-@yourusername
-
-Generate My Ticket
-
-<!-- Form ends -->
+    <button id="submit-ticket" type="submit">Generate My Ticket</button>
+</form>
 
 <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

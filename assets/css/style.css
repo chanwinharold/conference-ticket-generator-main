@@ -1,4 +1,75 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  appearance: none;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  row-gap: 3rem;
+  color: hsl(0, 0%, 100%);
+  font-family: Inconsolata, sans-serif;
+  font-size: 20px;
+  padding-block: 5rem;
+  background-color: hsl(248, 70%, 10%);
+  background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
+}
+@media screen and (max-width: 32rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-mobile.png");
+    background-position: 50vw 80vh, top, -5vh -5%, top right, bottom left, center;
+    background-size: 8rem, contain, 8rem, 8rem, 25rem, cover;
+  }
+}
+@media screen and (max-width: 68rem) and (min-width: 32rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-tablet.png");
+    background-position: 65vw 75vh, top, 5vh -10%, top right, bottom left, center;
+    background-size: 10rem, contain, 10rem, 15rem, 30rem, cover;
+  }
+}
+@media screen and (min-width: 68rem) {
+  body {
+    background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/background-desktop.png");
+    background-position: 65vw 50vh, top, 10vh -15%, top right, bottom left, center;
+    background-size: 10rem, contain, 10rem, 20rem, 35rem, cover;
+  }
+}
+
+.header {
+  display: grid;
+  place-items: center;
+  gap: 3rem;
+  text-align: center;
+  padding-inline: 1.5rem;
+}
+.header__image {
+  width: fit-content;
+}
+.header__subsection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media screen and (max-width: 32rem) {
+  .header {
+    max-width: 90vw;
+  }
+  .header__subsection__title {
+    font-size: 30px;
+  }
+}
+@media screen and (min-width: 32rem) {
+  .header {
+    max-width: 38rem;
+  }
+}
 .attribution {
+  display: none;
   font-size: 11px;
   text-align: center;
 }

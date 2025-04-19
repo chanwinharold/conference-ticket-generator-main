@@ -1,0 +1,90 @@
+@import "style";
+
+$transparent-bg: rgba(19, 19, 19, 0.5);
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    &__uploader-section {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border: none;
+
+        &__title {
+            font-size: $size*0.8;
+            margin-block: 1rem;
+        }
+        &__dragdrop {
+            height: 8rem;
+            border: 1px dashed $neutral-300;
+            border-radius: 8px;
+            background-color: $transparent-bg;
+
+            display: grid;
+            place-items: center;
+            text-align: center;
+            &:focus { outline: 2px solid $neutral-300; }
+
+            .input-cover {
+                appearance: none;
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                background: rgba(255, 255, 255, 0.25) url("../images/icon-upload.svg") no-repeat center;
+                background-size: 2.5rem;
+            }
+
+            span { font-size: $size*0.8; }
+        }
+        &__sub-info {
+            font-size: $size*0.7;
+
+            &::before {
+                content: " ";
+                padding: 0.7rem;
+                margin-right: 0.2rem;
+                background: url("../images/icon-info.svg") no-repeat center;
+                background-size: contain;
+
+            }
+        }
+    }
+    &__input-section {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        font-size: $size*0.8;
+
+        input {
+            height: 2.8rem;
+            border: 1px solid $neutral-300;
+            border-radius: 8px;
+            background-color: $transparent-bg;
+            color: white;
+            padding-left: 1rem;
+
+            &:focus { outline: 2px solid $neutral-300; }
+            &::placeholder { color: white; }
+        }
+    }
+    button {
+        height: 2.8rem;
+        border: none;
+        border-radius: 8px;
+        background-color: $orange-700;
+        font-weight: $bolder;
+        font-size: $size*0.8;
+
+        &:hover { opacity: 0.8; }
+    }
+}
+
+@media screen and (max-width: $sm) {
+    .form { max-width: 95vw; }
+    .form__uploader-section__sub-info { font-size: $size*0.55;
+        &::before { padding: 0.55rem; } } }
+
+@media screen and (min-width: $sm) { .form { width: 28rem; } }
