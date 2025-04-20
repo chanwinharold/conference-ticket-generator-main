@@ -27,14 +27,14 @@ body {
 @media screen and (max-width: 68rem) and (min-width: 32rem) {
   body {
     background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-tablet.png");
-    background-position: 65vw 75vh, top, 5vh -10%, top right, bottom left, center;
+    background-position: 65vw 75vh, top, 5vh -5%, top right, bottom left, center;
     background-size: 10rem, contain, 10rem, 15rem, 30rem, cover;
   }
 }
 @media screen and (min-width: 68rem) {
   body {
     background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/background-desktop.png");
-    background-position: 65vw 50vh, top, 10vh -15%, top right, bottom left, center;
+    background-position: 65vw 50vh, top, 10vh -5%, top right, bottom left, center;
     background-size: 10rem, contain, 10rem, 20rem, 35rem, cover;
   }
 }

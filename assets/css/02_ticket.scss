@@ -61,6 +61,7 @@ $h: 17.5rem;
 }
 
 .first-name {
+    text-transform: capitalize;
     background: #F37362FF;
     background: linear-gradient(90deg, rgba(243, 115, 98, 1) 0%, rgba(255, 255, 255, 1) 100%);
     -webkit-background-clip: text;

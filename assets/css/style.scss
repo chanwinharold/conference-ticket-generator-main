@@ -43,19 +43,19 @@ body {
     background-color: $neutral-900;
     background-repeat: no-repeat, repeat-x, no-repeat, no-repeat, no-repeat, no-repeat;
 
-    @media screen and (max-width: $sm){
+    @media screen and (max-width: $sm) {
         background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-mobile.png");
         background-position: 50vw 80vh, top, -5vh -5%, top right, bottom left, center;
         background-size: 8rem, contain, 8rem, 8rem, 25rem, cover;
     }
-    @media screen and (max-width: $md) and (min-width: $sm){
+    @media screen and (max-width: $md) and (min-width: $sm) {
         background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-tablet.png");
-        background-position: 65vw 75vh, top, 5vh -10%, top right, bottom left, center;
+        background-position: 65vw 75vh, top, 5vh -5%, top right, bottom left, center;
         background-size: 10rem, contain, 10rem, 15rem, 30rem, cover;
     }
-    @media screen and (min-width: $md){
+    @media screen and (min-width: $md) {
         background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/background-desktop.png");
-        background-position: 65vw 50vh, top, 10vh -15%, top right, bottom left, center;
+        background-position: 65vw 50vh, top, 10vh -5%, top right, bottom left, center;
         background-size: 10rem, contain, 10rem, 20rem, 35rem, cover;
     }
 }

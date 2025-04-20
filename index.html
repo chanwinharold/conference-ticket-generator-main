@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/01_form.css">
 
     <script src="assets/js/main.js" defer></script>
-    <script src="assets/js/01_script.js" defer></script>
 
     <title>Frontend Mentor | Conference ticket generator</title>
 
@@ -41,18 +40,21 @@
     </fieldset>
 
     <label class="form__input-section" for="name">Full Name
-        <input id="name" type="text" name="full_name">
+        <input id="name" type="text" name="full_name" maxlength="20">
+        <span class="error">Please enter a valid name</span>
     </label>
 
     <label class="form__input-section" for="email">Email Address
         <input id="email" type="email" name="email" placeholder="example@email.com">
+        <span class="error">Please enter a valid email address</span>
     </label>
 
     <label class="form__input-section" for="github">GitHub Username
-        <input id="github" type="text" name="github" placeholder="@yourusername">
+        <input id="github" type="text" name="github" placeholder="@yourusername" maxlength="20">
+        <span class="error">Please enter a valid GitHub username</span>
     </label>
 
-    <button id="submit-ticket" type="submit">Generate My Ticket</button>
+    <a id="submit-ticket" class="form__button" target="_blank">Generate My Ticket</a>
 </form>
 
 <footer class="attribution">

@@ -27,14 +27,14 @@ body {
 @media screen and (max-width: 68rem) and (min-width: 32rem) {
   body {
     background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-mobile-tablet.svg"), url("../images/background-tablet.png");
-    background-position: 65vw 75vh, top, 5vh -10%, top right, bottom left, center;
+    background-position: 65vw 75vh, top, 5vh -5%, top right, bottom left, center;
     background-size: 10rem, contain, 10rem, 15rem, 30rem, cover;
   }
 }
 @media screen and (min-width: 68rem) {
   body {
     background-image: url("../images/pattern-circle.svg"), url("../images/pattern-lines.svg"), url("../images/pattern-circle.svg"), url("../images/pattern-squiggly-line-top.svg"), url("../images/pattern-squiggly-line-bottom-desktop.svg"), url("../images/background-desktop.png");
-    background-position: 65vw 50vh, top, 10vh -15%, top right, bottom left, center;
+    background-position: 65vw 50vh, top, 10vh -5%, top right, bottom left, center;
     background-size: 10rem, contain, 10rem, 20rem, 35rem, cover;
   }
 }
@@ -139,23 +139,41 @@ body {
   background-color: rgba(19, 19, 19, 0.5);
   color: white;
   padding-left: 1rem;
+  outline: none;
 }
 .form__input-section input:focus {
-  outline: 2px solid hsl(252, 6%, 83%);
+  border: 2px solid hsl(252, 6%, 83%);
 }
 .form__input-section input::placeholder {
   color: white;
 }
-.form button {
-  height: 2.8rem;
+.form__button {
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  padding-block: 1rem;
   border: none;
   border-radius: 8px;
   background-color: hsl(7, 71%, 60%);
   font-weight: 800;
   font-size: 16px;
 }
-.form button:hover {
+.form__button:hover {
   opacity: 0.8;
+}
+
+.error {
+  display: none;
+  font-size: 12px;
+  color: hsl(7, 71%, 60%);
+}
+.error::before {
+  content: "";
+  opacity: 0.5;
+  padding: 0.6rem;
+  margin-right: 0.2rem;
+  background: url("../images/icon-info-red.png") no-repeat center;
+  background-size: contain;
 }
 
 @media screen and (max-width: 32rem) {
