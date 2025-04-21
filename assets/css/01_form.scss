@@ -3,6 +3,7 @@
 $transparent-bg: rgba(19, 19, 19, 0.5);
 
 .form {
+    animation: disappear-reappear-2 1000ms backwards 300ms;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -101,6 +102,10 @@ $transparent-bg: rgba(19, 19, 19, 0.5);
         background: url("../images/icon-info-red.png") no-repeat center;
         background-size: contain;
     }
+}
+
+.content {
+    &::before { background: url("../images/icon-info-red.png") no-repeat center !important; }
 }
 
 @media screen and (max-width: $sm) {

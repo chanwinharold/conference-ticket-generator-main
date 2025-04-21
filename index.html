@@ -33,31 +33,31 @@
         <legend class="form__uploader-section__title">Upload Avatar</legend>
         <label class="form__uploader-section__dragdrop" for="uploader" tabindex="0">
             <label class="input-cover" for="uploader"></label>
-            <input id="uploader" type="file" name="image" accept="image/*" hidden>
+            <input id="uploader" aria-hidden="true" type="file" name="image" accept="image/*" hidden>
             <span>Drag and drop or click to upload</span>
         </label>
         <span class="form__uploader-section__sub-info">Upload your photo (JPG or PNG, max size: 500KB).</span>
     </fieldset>
 
     <label class="form__input-section" for="name">Full Name
-        <input id="name" type="text" name="full_name" maxlength="20">
+        <input id="name" type="text" name="full_name" maxlength="20" required>
         <span class="error">Please enter a valid name</span>
     </label>
 
     <label class="form__input-section" for="email">Email Address
-        <input id="email" type="email" name="email" placeholder="example@email.com">
+        <input id="email" type="email" name="email" placeholder="example@email.com" required>
         <span class="error">Please enter a valid email address</span>
     </label>
 
     <label class="form__input-section" for="github">GitHub Username
-        <input id="github" type="text" name="github" placeholder="@yourusername" maxlength="20">
+        <input id="github" type="text" name="github" placeholder="@yourusername" maxlength="20" required>
         <span class="error">Please enter a valid GitHub username</span>
     </label>
 
-    <a id="submit-ticket" class="form__button" target="_blank">Generate My Ticket</a>
+    <a id="submit-ticket" class="form__button">Generate My Ticket</a>
 </form>
 
-<footer class="attribution">
+<footer class="attribution" aria-hidden="true">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="https://github.com/chanwinharold" target="_blank">@chanwinharold</a>.
 </footer>

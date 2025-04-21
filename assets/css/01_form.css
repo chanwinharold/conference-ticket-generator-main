@@ -40,6 +40,7 @@ body {
 }
 
 .header {
+  animation: disappear-reappear-1 600ms backwards;
   display: grid;
   place-items: center;
   gap: 3rem;
@@ -78,7 +79,28 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+@keyframes disappear-reappear-1 {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes disappear-reappear-2 {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .form {
+  animation: disappear-reappear-2 1000ms backwards 300ms;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -174,6 +196,10 @@ body {
   margin-right: 0.2rem;
   background: url("../images/icon-info-red.png") no-repeat center;
   background-size: contain;
+}
+
+.content::before {
+  background: url("../images/icon-info-red.png") no-repeat center !important;
 }
 
 @media screen and (max-width: 32rem) {

@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Solution URL here](https://your-solution-url.com)
-- Live Site URL: [Live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://github.com/chanwinharold/conference-ticket-generator-main)
+- Live Site URL: [Live site URL here](https://conference-ticket-generator-main-two.vercel.app/)
 
 ### Built with
 
@@ -39,6 +39,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- Javascript
+- Accessibility practices
 
 ## Author
 

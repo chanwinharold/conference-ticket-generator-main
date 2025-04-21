@@ -4,6 +4,7 @@ $w: 37.5rem;
 $h: 17.5rem;
 
 .ticket {
+    animation: disappear-reappear-2 1000ms backwards 300ms;
     display: grid;
     grid-template-columns: 6fr 1fr;
     grid-template-rows: 1fr 1fr;

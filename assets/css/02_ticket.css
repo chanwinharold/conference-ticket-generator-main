@@ -40,6 +40,7 @@ body {
 }
 
 .header {
+  animation: disappear-reappear-1 600ms backwards;
   display: grid;
   place-items: center;
   gap: 3rem;
@@ -78,7 +79,28 @@ body {
   color: hsl(228, 45%, 44%);
 }
 
+@keyframes disappear-reappear-1 {
+  from {
+    transform: scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes disappear-reappear-2 {
+  from {
+    transform: translateY(25%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .ticket {
+  animation: disappear-reappear-2 1000ms backwards 300ms;
   display: grid;
   grid-template-columns: 6fr 1fr;
   grid-template-rows: 1fr 1fr;
